@@ -50,71 +50,124 @@
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
       flex-wrap: wrap;
     }
     .logo-img {
-      max-height: 60px;
+      max-height: 85px;
       width: auto;
       display: block;
+      transition: transform 0.2s;
+    }
+    .logo-img:hover {
+      transform: scale(1.02);
     }
     .logo-text {
-      font-size: 0.8rem;
-      font-weight: 500;
+      font-size: 0.85rem;
+      font-weight: 600;
       color: #2c5a6e;
       border-left: 2px solid #00acc4;
-      padding-left: 12px;
+      padding-left: 14px;
     }
+
+    /* ===== MENÚ DE NAVEGACIÓN DESTACADO (BOTONES) ===== */
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.8rem;
+      gap: 0.8rem;
       list-style: none;
     }
     .nav-links a {
       text-decoration: none;
-      font-weight: 600;
-      color: #1f4e6e;
-      transition: 0.2s ease;
-      font-size: 0.95rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 60px;
+      background: linear-gradient(135deg, #f5fafd, #ecf5f9);
+      color: #005f7a;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(0,136,169,0.2);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+    .nav-links a i {
+      font-size: 0.85rem;
+      transition: transform 0.2s;
     }
     .nav-links a:hover {
-      color: #0088a9;
-      border-bottom: 2px solid #0088a9;
-      padding-bottom: 4px;
+      background: linear-gradient(135deg, #0088a9, #00acc4);
+      color: white;
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0,136,169,0.25);
+    }
+    .nav-links a:hover i {
+      transform: translateX(3px);
+    }
+    /* Efecto active sutil al hacer clic */
+    .nav-links a:active {
+      transform: translateY(1px);
     }
 
+    /* Botones generales mejorados */
     .btn-primary {
-      background: linear-gradient(95deg, #007c9e, #00acc4);
+      background: linear-gradient(105deg, #007c9e, #00acc4);
       color: white;
       border: none;
-      padding: 12px 30px;
-      border-radius: 40px;
+      padding: 14px 36px;
+      border-radius: 60px;
       font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
-      transition: 0.2s;
-      display: inline-block;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       text-decoration: none;
-      box-shadow: 0 6px 14px rgba(0,124,158,0.25);
+      box-shadow: 0 8px 18px rgba(0,124,158,0.3);
+      letter-spacing: 0.3px;
+    }
+    .btn-primary i {
+      font-size: 1.1rem;
+      transition: transform 0.2s;
     }
     .btn-primary:hover {
-      background: linear-gradient(95deg, #006280, #008ea3);
-      transform: translateY(-2px);
+      background: linear-gradient(105deg, #006280, #008ea3);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px rgba(0,124,158,0.4);
     }
+    .btn-primary:hover i {
+      transform: translateX(4px);
+    }
+
     .btn-outline {
       background: transparent;
       border: 2px solid #0088a9;
       color: #0088a9;
-      padding: 8px 24px;
-      border-radius: 40px;
-      font-weight: 600;
-      transition: 0.2s;
+      padding: 10px 28px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     .btn-outline:hover {
       background: #0088a9;
       color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,136,169,0.3);
+    }
+    .btn-warning {
+      background: linear-gradient(105deg, #ff8c42, #ff6a2c);
+      box-shadow: 0 8px 18px rgba(255,108,44,0.3);
+    }
+    .btn-warning:hover {
+      background: linear-gradient(105deg, #e6762a, #e65c1e);
     }
 
     /* Hero */
@@ -147,7 +200,7 @@
     .hero-desc {
       font-size: 1rem;
       color: #2c4b5c;
-      margin: 1rem 0 1.5rem;
+      margin: 1rem 0 1.8rem;
       max-width: 90%;
     }
     .hero-image {
@@ -155,11 +208,27 @@
       text-align: center;
     }
     .catalog-badge-img {
-      max-width: 280px;
-      border-radius: 24px;
-      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.1);
+      max-width: 340px;
+      width: 100%;
+      border-radius: 28px;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2);
       background: white;
       padding: 12px;
+      transition: transform 0.2s;
+    }
+    .catalog-badge-img:hover {
+      transform: scale(1.02);
+    }
+    .stat-badge {
+      background: white;
+      border-radius: 60px;
+      padding: 10px 22px;
+      font-weight: 600;
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.05);
     }
 
     .section-title {
@@ -175,7 +244,7 @@
       position: absolute;
       bottom: -12px;
       left: 0;
-      width: 60px;
+      width: 70px;
       height: 4px;
       background: #00acc4;
       border-radius: 4px;
@@ -192,19 +261,20 @@
       border-radius: 32px;
       padding: 1.8rem;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
       flex: 1 1 280px;
       border: 1px solid rgba(0,136,169,0.15);
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 22px 40px rgba(0,0,0,0.08);
     }
     .price-card {
       flex: 1 1 320px;
-      border-top: 5px solid #00acc4;
+      border-top: 6px solid #00acc4;
     }
     .price {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
       color: #004c66;
       margin: 1rem 0;
@@ -212,56 +282,73 @@
     .badge-local {
       background: #e2f0f5;
       color: #006b8a;
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: 50px;
       font-weight: 600;
       font-size: 0.8rem;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
     .contact-form {
       background: white;
-      border-radius: 32px;
+      border-radius: 36px;
       padding: 2rem;
       box-shadow: 0 20px 35px rgba(0,0,0,0.05);
     }
     input, select, textarea {
       width: 100%;
-      padding: 12px 16px;
-      border-radius: 28px;
+      padding: 14px 18px;
+      border-radius: 40px;
       border: 1px solid #cbdde6;
       font-family: inherit;
       margin-top: 8px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       background: #fefefe;
+      transition: 0.2s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #00acc4;
+      box-shadow: 0 0 0 3px rgba(0,172,196,0.2);
     }
     label {
       font-weight: 600;
-      margin-left: 6px;
+      margin-left: 8px;
     }
     footer {
       background: #0a2e3f;
       color: #cbdde6;
       text-align: center;
-      padding: 2rem 0;
+      padding: 2.5rem 0;
       margin-top: 4rem;
-      border-radius: 32px 32px 0 0;
+      border-radius: 40px 40px 0 0;
     }
     @media (max-width: 800px) {
       .hero-content h2 { font-size: 2rem; }
       .nav-bar { flex-direction: column; align-items: center; }
-      .hero-image { margin-top: 1rem; }
+      .nav-links { justify-content: center; }
+      .hero-image { margin-top: 1.5rem; }
+      .catalog-badge-img { max-width: 280px; }
+      .logo-img { max-height: 65px; }
     }
     .inline-icon { margin-right: 8px; color: #00a6c0; }
     hr { margin: 1rem 0; border-color: #cde3ec; }
     .catalog-showcase {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 2rem;
       background: #ffffffcc;
-      border-radius: 32px;
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
+      backdrop-filter: blur(2px);
+      border-radius: 48px;
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .btn-large {
+      padding: 14px 40px;
+      font-size: 1.05rem;
     }
   </style>
 </head>
@@ -270,23 +357,22 @@
 <header class="header">
   <div class="container nav-bar">
     <div class="logo-area">
-      <!-- IMAGEN LOGO agregada desde carpeta Imagenes -->
       <img src="Imagenes/Imagen_logo.png" alt="Aquaconnect México - Conexión y Valor para tu Acuario" class="logo-img" onerror="this.onerror=null; this.style.display='none';">
       <div class="logo-text">Tecnología y Servicio</div>
     </div>
     <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#producto">Nuestro Producto</a></li>
-      <li><a href="#catalogo">Catálogo y Precios</a></li>
-      <li><a href="#porque">¿Por qué elegirnos?</a></li>
-      <li><a href="#ubicaciones">Ubicaciones</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+      <li><a href="#producto"><i class="fas fa-microchip"></i> Nuestro Producto</a></li>
+      <li><a href="#catalogo"><i class="fas fa-tags"></i> Catálogo y Precios</a></li>
+      <li><a href="#porque"><i class="fas fa-question-circle"></i> ¿Por qué elegirnos?</a></li>
+      <li><a href="#ubicaciones"><i class="fas fa-map-marker-alt"></i> Ubicaciones</a></li>
+      <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
     </ul>
   </div>
 </header>
 
 <main>
-  <!-- Hero Section con imagen de catalogo incluida -->
+  <!-- Hero Section con imagen de catálogo más grande -->
   <section id="inicio" class="hero">
     <div class="container hero-grid">
       <div class="hero-content">
@@ -296,10 +382,9 @@
         <a href="#catalogo" class="btn-primary"><i class="fas fa-microchip"></i> Conoce nuestros equipos</a>
       </div>
       <div class="hero-image">
-        <!-- IMAGEN CATÁLOGO agregada: escanea para comenzar, precisión profesional -->
-        <img src="Imagenes/imagen_catalogo.png" alt="Aquaconnect - Precisión profesional, descarga software, monitoreo" class="catalog-badge-img" style="max-width: 260px; width:100%;" onerror="this.src='https://placehold.co/400x300?text=AQUACONNECT'">
-        <div class="stat-badge" style="margin-top: 1rem; background: white; border-radius: 40px; padding: 8px 16px; font-size: 0.8rem; display: inline-block;">
-          <i class="fas fa-qrcode"></i> Escanea para comenzar · Instalación directa
+        <img src="Imagenes/imagen_catalogo.png" alt="Aquaconnect - Precisión profesional, descarga software, monitoreo" class="catalog-badge-img" onerror="this.src='https://placehold.co/500x400?text=AQUACONNECT'">
+        <div class="stat-badge">
+          <i class="fas fa-qrcode fa-lg"></i> Escanea para comenzar · Instalación directa
         </div>
       </div>
     </div>
@@ -310,17 +395,17 @@
     <h2 class="section-title">⚙️ Nuestro Equipo · Tecnología de Vanguardia</h2>
     <p style="font-size:1.1rem; max-width: 800px;">Nuestro producto estrella consiste en un circuito de bajo costo, soldado en placas personalizadas, equipado con un microcontrolador integrado ESP32 que permite el envío de datos vía WiFi en tiempo real.</p>
     <div class="features-grid">
-      <div class="card"><i class="fas fa-microchip"></i><h3>Hardware adaptable</h3><p>Al ser fabricantes, adaptamos componentes a las necesidades específicas de tu acuario.</p></div>
-      <div class="card"><i class="fas fa-tachometer-alt"></i><h3>Sensores estándar</h3><p>Medición continua de <strong>pH, conductividad eléctrica y temperatura</strong>. Precisión profesional.</p></div>
-      <div class="card"><i class="fas fa-chart-line"></i><h3>Software de gestión</h3><p>Visualiza tendencias históricas y recibe alertas al celular para prevenir desastres.</p></div>
-      <div class="card"><i class="fas fa-handshake"></i><h3>Servicio integral</h3><p>Hardware + instalación + software, eliminamos la barrera técnica. Instalación física incluida.</p></div>
+      <div class="card"><i class="fas fa-microchip fa-2x" style="color:#0088a9;"></i><h3>Hardware adaptable</h3><p>Al ser fabricantes, adaptamos componentes a las necesidades específicas de tu acuario.</p></div>
+      <div class="card"><i class="fas fa-tachometer-alt fa-2x" style="color:#0088a9;"></i><h3>Sensores estándar</h3><p>Medición continua de <strong>pH, conductividad eléctrica y temperatura</strong>. Precisión profesional.</p></div>
+      <div class="card"><i class="fas fa-chart-line fa-2x" style="color:#0088a9;"></i><h3>Software de gestión</h3><p>Visualiza tendencias históricas y recibe alertas al celular para prevenir desastres.</p></div>
+      <div class="card"><i class="fas fa-handshake fa-2x" style="color:#0088a9;"></i><h3>Servicio integral</h3><p>Hardware + instalación + software, eliminamos la barrera técnica. Instalación física incluida.</p></div>
     </div>
     <div style="background:#eaf4f9; border-radius: 28px; padding: 1.5rem; margin-top: 2rem; text-align:center;">
       <i class="fas fa-wifi"></i> <strong>ESP32 integrado</strong> · Datos en la nube · Alertas instantáneas al móvil · Compatible con sistemas plantados, arrecife y disco.
     </div>
   </section>
 
-  <!-- Catálogo y Precios (con énfasis en imagen de catálogo) -->
+  <!-- Catálogo y Precios (con imagen de catálogo reforzada) -->
   <section id="catalogo" class="container" style="margin-bottom: 4rem;">
     <h2 class="section-title">💰 Catálogo de inversión · Protege tu ecosistema</h2>
     <div style="background: #d9ecf2; border-radius: 32px; padding: 1.5rem; margin-bottom: 2rem;">
@@ -333,15 +418,17 @@
       <p class="small-text" style="margin-top: 1rem;">🔹 Un solo evento de sobrecalentamiento puede matar el 100% de los peces. Tu dispositivo paga su valor total con solo prevenir la muerte de un pez disco premium.</p>
     </div>
 
-    <!-- Mostrar imagen de catálogo nuevamente como refuerzo -->
-    <div class="catalog-showcase" style="justify-content: center; margin-bottom: 2rem;">
-      <img src="Imagenes/imagen_catalogo.png" alt="Aquaconnect - Descarga software, monitoreo y agenda, instalación directa" style="max-height: 110px; width: auto;" onerror="this.style.display='none'">
-      <div><i class="fas fa-arrow-right"></i> <strong>Precisión profesional al alcance del hobbista</strong><br>Descarga nuestra App de monitoreo y recibe alertas en tiempo real</div>
+    <!-- Mostrar imagen de catálogo nuevamente con más tamaño -->
+    <div class="catalog-showcase">
+      <img src="Imagenes/imagen_catalogo.png" alt="Aquaconnect - Descarga software, monitoreo y agenda, instalación directa" style="max-height: 140px; width: auto;" onerror="this.style.display='none'">
+      <div><i class="fas fa-arrow-right fa-fw"></i> <strong>Precisión profesional al alcance del hobbista</strong><br>Descarga nuestra App de monitoreo y recibe alertas en tiempo real<br>
+      <span class="badge-local" style="margin-top: 8px;"><i class="fas fa-download"></i> Software incluido + instalación directa</span>
+      </div>
     </div>
 
     <div class="products-grid">
       <div class="card price-card">
-        <i class="fas fa-home" style="font-size: 2rem;"></i>
+        <i class="fas fa-home fa-2x"></i>
         <h3>Dispositivo Aquaconnect Individual</h3>
         <div class="price">$3,000 MXN</div>
         <p><i class="fas fa-check-circle inline-icon"></i> Incluye: hardware + software de monitoreo + instalación física.</p>
@@ -349,21 +436,21 @@
         <p><i class="fas fa-chart-line inline-icon"></i> Acuario con historial de salud documentado, mayor valor de reventa.</p>
         <hr>
         <p><strong>ROI inmediato:</strong> equivalente al 6%-20% del valor total del tanque.</p>
-        <a href="#contacto" class="btn-outline" style="margin-top: 1rem; display: inline-block;">Solicitar asesoría</a>
+        <a href="#contacto" class="btn-outline" style="margin-top: 1rem;"><i class="fas fa-cart-shopping"></i> Solicitar asesoría</a>
       </div>
 
       <div class="card price-card" style="border-top-color: #ff9f4a;">
-        <i class="fas fa-store"></i>
+        <i class="fas fa-store fa-2x"></i>
         <h3>Paquete Comercial (5+ unidades)</h3>
         <div class="price">$2,400 MXN <span style="font-size: 1rem;">c/u</span></div>
         <p><i class="fas fa-tags inline-icon"></i> <strong>Descuento del 20%</strong> para tiendas, criaderos y restaurantes.</p>
         <p><i class="fas fa-clock inline-icon"></i> Centraliza el control de múltiples tanques de exhibición.</p>
         <p><i class="fas fa-user-clock inline-icon"></i> Reduce horas hombre de supervisión manual.</p>
         <p><i class="fas fa-chart-network inline-icon"></i> Ideal para negocios con inventario vivo en Juriquilla o Centro Histórico.</p>
-        <a href="#contacto" class="btn-primary" style="margin-top: 1rem; display: inline-block; background: #ff8c42;">Cotizar volumen</a>
+        <a href="#contacto" class="btn-primary btn-warning" style="margin-top: 1rem; background: linear-gradient(105deg, #ff8c42, #ff6a2c);"><i class="fas fa-charging-station"></i> Cotizar volumen</a>
       </div>
     </div>
-    <div style="margin-top: 2rem; background: #fef4e8; border-radius: 24px; padding: 1rem; text-align: center;">
+    <div style="margin-top: 2rem; background: #fef4e8; border-radius: 28px; padding: 1.2rem; text-align: center;">
       <i class="fas fa-chart-simple"></i> <strong>El Costo de la Inacción:</strong> ¿Arriesgar una pérdida de $30,000+ por no monitorear? Tu acuario merece alertas 24/7.
     </div>
   </section>
@@ -375,26 +462,26 @@
       <div style="flex: 1.2;">
         <p style="font-size: 1.1rem; margin-bottom: 1rem;"><strong>Conocemos los factores críticos locales</strong> que afectan a acuaristas de la región. Nuestra tecnología diseñada para combatirlos.</p>
         <div class="card" style="background: #f0f7fa;">
-          <i class="fas fa-tint"></i>
+          <i class="fas fa-tint fa-2x"></i>
           <h3>Dureza del Agua (KH/GH)</h3>
           <p>El agua de la CEA (Comisión Estatal de Aguas) es muy alcalina. Nuestro software envía alertas inmediatas si el pH sube, indicando fallos en el sistema de CO₂ o buffers. Vital para peces disco y corales.</p>
         </div>
         <div class="card" style="margin-top: 1rem;">
-          <i class="fas fa-temperature-high"></i>
+          <i class="fas fa-temperature-high fa-2x"></i>
           <h3>Oscilaciones térmicas extremas</h3>
           <p>Querétaro tiene cambios bruscos entre día y noche. Un fallo en el termostato en la madrugada es letal. La alerta al celular marca la diferencia entre un susto y una pérdida total.</p>
         </div>
       </div>
-      <div style="flex: 0.9; background: linear-gradient(145deg, #ffffff, #f3fafd); border-radius: 28px; padding: 1.5rem;">
-        <i class="fas fa-shield-alt" style="font-size: 2rem; color:#0088a9;"></i>
+      <div style="flex: 0.9; background: linear-gradient(145deg, #ffffff, #f3fafd); border-radius: 32px; padding: 1.8rem;">
+        <i class="fas fa-shield-alt fa-2x" style="color:#0088a9;"></i>
         <h3>Ventajas exclusivas</h3>
-        <ul style="margin-left: 1.2rem; line-height: 1.7;">
+        <ul style="margin-left: 1.2rem; line-height: 1.8;">
           <li><i class="fas fa-microchip inline-icon"></i> <strong>Precisión profesional:</strong> sensores calibrados para monitoreo continuo.</li>
           <li><i class="fas fa-chart-line inline-icon"></i> <strong>Software predictivo:</strong> tendencias históricas para prevenir desastres.</li>
           <li><i class="fas fa-hand-holding-heart inline-icon"></i> <strong>Relación CRM:</strong> alertas preventivas, recordatorios de mantenimiento.</li>
           <li><i class="fas fa-tools inline-icon"></i> <strong>Soporte local en Querétaro:</strong> instalación y servicio técnico garantizado.</li>
         </ul>
-        <div class="badge-local" style="margin-top: 1rem;"><i class="fas fa-check-circle"></i> +95% de clientes reducen pérdidas en su primer año</div>
+        <div class="badge-local" style="margin-top: 1.5rem;"><i class="fas fa-check-circle"></i> +95% de clientes reducen pérdidas en su primer año</div>
       </div>
     </div>
   </section>
@@ -414,22 +501,22 @@
             <span class="badge-local"><i class="fas fa-utensils"></i> Restaurantes zona financiera</span>
           </div>
         </div>
-        <div style="background: #ffffff; border-radius: 28px; padding: 1rem; box-shadow: 0 6px 12px rgba(0,0,0,0.03);">
+        <div style="background: #ffffff; border-radius: 28px; padding: 1.2rem; box-shadow: 0 6px 14px rgba(0,0,0,0.03);">
           <i class="fas fa-flag-checkered"></i> <strong>Nuestra Sede:</strong><br>
           📍 Centro histórico Querétaro, Universidad N21, Querétaro, Qro.<br>
           <i class="fas fa-clock"></i> Atención: Lunes a Viernes 10am - 6pm, sábados con cita.
         </div>
       </div>
-      <div style="flex: 1; background: #eef3f7; border-radius: 32px; padding: 1rem; text-align: center;">
-        <i class="fas fa-store" style="font-size: 2rem;"></i>
+      <div style="flex: 1; background: #eef3f7; border-radius: 32px; padding: 1.5rem; text-align: center;">
+        <i class="fas fa-store fa-2x"></i>
         <p><strong>Aliados comerciales</strong><br>Distribución en tiendas de acuarismo en Querétaro y venta directa para criadores profesionales.</p>
-        <i class="fas fa-truck-fast" style="font-size: 1.8rem; margin-top: 0.5rem; color:#007c9e;"></i>
+        <i class="fas fa-truck-fast fa-2x" style="margin-top: 0.8rem; color:#007c9e;"></i>
         <p class="small-text">Instalación express en acuarios comerciales de Antea y zonas concurridas.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contacto + CRM -->
+  <!-- Contacto + CRM con botones atractivos -->
   <section id="contacto" class="container" style="margin-bottom: 4rem;">
     <h2 class="section-title">📞 Contáctanos · Socios en el éxito de tu acuario</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
@@ -452,16 +539,16 @@
             <input type="tel" id="telefono" placeholder="442 347 8325" required>
             <label>Mensaje o consulta</label>
             <textarea rows="3" id="mensaje" placeholder="Cuéntanos sobre tu acuario, número de tanques o dudas técnicas..."></textarea>
-            <button type="button" class="btn-primary" id="btnEnviarForm" style="width:100%;"><i class="fab fa-whatsapp"></i> Solicitar Asesoría</button>
+            <button type="button" class="btn-primary btn-large" id="btnEnviarForm" style="width:100%; justify-content: center;"><i class="fab fa-whatsapp"></i> Solicitar Asesoría</button>
           </form>
           <p class="small-text" style="margin-top: 1rem;"><i class="fas fa-laptop-code"></i> Recibirás alertas preventivas y contenido técnico.</p>
         </div>
       </div>
       <div style="flex: 0.9;">
         <div class="card" style="height: 100%;">
-          <i class="fas fa-headset" style="font-size: 2rem;"></i>
+          <i class="fas fa-headset fa-2x"></i>
           <h3>Atención directa</h3>
-          <p><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>WhatsApp / Teléfono:</strong> <a href="https://wa.me/524423478325" style="text-decoration:none; color:#007c9e;">442 347 8325</a></p>
+          <p><i class="fab fa-whatsapp" style="color:#25D366; font-size: 1.2rem;"></i> <strong>WhatsApp / Teléfono:</strong> <a href="https://wa.me/524423478325" style="text-decoration:none; color:#007c9e; font-weight:600;">442 347 8325</a></p>
           <p><i class="fas fa-envelope"></i> <strong>Email:</strong> hola@aquaconnect.mx (consultas técnicas)</p>
           <hr>
           <p><i class="fas fa-chart-line"></i> <strong>CRM activo:</strong> Acompañamiento continuo, alertas de mantenimiento y calibración.</p>
@@ -484,7 +571,7 @@
 </footer>
 
 <script>
-  // Envío de formulario y alerta + redirección opcional a WhatsApp
+  // Envío de formulario mejorado
   const btnEnviar = document.getElementById('btnEnviarForm');
   if(btnEnviar){
     btnEnviar.addEventListener('click', function(){
@@ -498,16 +585,16 @@
         return;
       }
       alert(`✅ ¡Gracias ${nombre}! Hemos recibido tu solicitud. Un asesor de Aquaconnect México te contactará vía WhatsApp o llamada en las próximas 24 horas. 📲 Recibirás alertas preventivas y seguimiento personalizado.`);
-      // Limpiar formulario (opcional)
       document.getElementById('leadForm').reset();
     });
   }
 
-  // Smooth scroll para menú
-  document.querySelectorAll('.nav-links a').forEach(anchor => {
+  // Smooth scroll mejorado (para todos los enlaces internos)
+  document.querySelectorAll('.nav-links a, .btn-primary[href="#catalogo"], .btn-outline[href="#contacto"], .btn-primary[href="#contacto"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if(targetId && targetId !== '#') {
+      const href = this.getAttribute('href');
+      if(href && href !== '#') {
+        const targetId = href.includes('#') ? href : href;
         const targetElement = document.querySelector(targetId);
         if(targetElement){
           e.preventDefault();
